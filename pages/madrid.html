@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta name="viewpoint" content="width=max-width, initial-scale=1.0" charset="UTF-8">
+      <title>Мадрид</title>
+	  <link rel="stylesheet" type="text/css" href="../css/style.css">
+   </head>
+   <body>  
+      <div class="container">
+         <header>
+         	<h1>Города в Европе</h1>
+         </header>
+         <nav>
+         	<ul>
+				<li class="col1"><a href="../index.html">Лондон</a></li>
+				<li class="col2"><a href="../pages/paris.html">Париж</a></li>
+				<li class="col1"><a href="../pages/rom.html">Рим</a></li>
+				<li class="col2"><a href="../pages/vena.html">Вена</a></li>
+				<li class="col1"><a href="../pages/madrid.html">Мадрид</a></li>
+         	</ul>
+         </nav>
+         <article>
+         	<h2 align="center">Мадрид</h2>
+         	<div align="center">
+         		<img src="../img/Madrid.jpg" width="75%" height="75%" style="border-radius: 20px;">
+         	</div>
+			 <br><br>
+			 <div>
+         	<p>
+				Мадрид – столица Испании в центре Пиренейского полуострова, город элегантных бульваров и огромных ухоженных парков, к числу которых относится парк Буэн-Ретиро. Город славится своими музеями европейского искусства. В самом известном из них – музее Прадо – выставлены работы Гойи, Веласкеса и других испанских мастеров.         	</p>
+         	<p>
+				Сердце старого габсбургского Мадрида – площадь Майор, окруженная зданиями с галереями. Неподалеку от нее расположены Королевский дворец в стиле барокко и Королевская оружейная палата с коллекцией исторического оружия.			 
+			</p>
+			 </div>
+		 </article>
+		 <h2 style="text-align:center">Интересные места в Мадриде</h2>
+
+		 <div class="container_img">
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="../img/madrid1.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="../img/madrid2.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="../img/madrid3.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="../img/madrid4.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="../img/madrid5.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="../img/madrid6.jpg" style="width:100%">
+			</div>
+
+		
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Собор Альмудена">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Королевский дворец Мадрида">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Национальная библиотека">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Музей Прадо">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Башни Колумба">
+			</div>    
+			<div class="column">
+				<img class="demo cursor" src="../img/madrid6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Парк Ретиро">
+			</div>
+		</div>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+	
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
+	
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+	
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			var captionText = document.getElementById("caption");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+			</script>
+         <footer>Хорошего отдыха...</footer>
+      </div>
+   </body>
+</html>

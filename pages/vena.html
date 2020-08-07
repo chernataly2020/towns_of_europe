@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta name="viewpoint" content="width=max-width, initial-scale=1.0" charset="UTF-8">
+      <title>Вена</title>
+	  <link rel="stylesheet" type="text/css" href="../css/style.css">
+   </head>
+   <body>  
+      <div class="container">
+         <header>
+			<h1>Города в Европе</h1>	 			 
+         </header>
+         <nav>
+         	<ul>
+         		<li class="col1"><a href="../index.html">Лондон</a></li>
+         		<li class="col2"><a href="../pages/paris.html">Париж</a></li>
+         		<li class="col1"><a href="../pages/rom.html">Рим</a></li>
+         		<li class="col2"><a href="#">Вена</a></li>
+         		<li class="col1"><a href="../pages/madrid.html">Мадрид</a></li>
+			 </ul>
+         </nav>
+         <article>
+         	<h2 align="center">Вена</h2>
+         	<div align="center">
+         		<img src="../img/vena.jpg" width="50%" height="50%" style="border-radius: 20px;">
+         	</div>
+			 <br><br>
+			 <div>
+         	<p>
+				Вена – столица Австрии, расположена в восточной части страны на реке Дунай. В культурное и интеллектуальное наследие города внесли вклад такие известные жители, как В.А. Моцарт, Л. Бетховен и З. Фрейд. 
+			</p>
+			<p>
+				Также Вена знаменита своими императорскими дворцами, среди которых Шёнбрунн – летняя резиденция династии Габсбургов. А в районе Музейный квартал в исторических и современных зданиях собраны работы таких художников, как Э. Шиле и Г. Климт.			  
+			</p>
+        </div>
+		 </article>
+		 <h2 style="text-align:center">Интересные места в Вене</h2>
+
+		 <div class="container_img">
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="../img/vena1.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="../img/vena2.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="../img/vena3.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="../img/vena4.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="../img/vena5.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="../img/vena6.jpg" style="width:100%">
+			</div>
+
+		
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="../img/vena1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Символ Вены — Оперный театр">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/vena2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Железнодорожный вокзал в Вене">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/vena3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Артефакты эпохи Рима">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/vena4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Собор святого Стефана">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/vena5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Венский Бельведер">
+			</div>    
+			<div class="column">
+				<img class="demo cursor" src="../img/vena6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Венский сецессион">
+			</div>
+		</div>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+	
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
+	
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+	
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			var captionText = document.getElementById("caption");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+			</script>
+         <footer>Хорошего отдыха...</footer>
+      </div>
+   </body>
+</html>

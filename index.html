@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta name="viewpoint" content="width=max-width, initial-scale=1.0" charset="UTF-8">
+      <title>Размещение элементов на странице</title>
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>  
+      <div class="container">
+         <header>
+         	<h1>Города в Европе</h1>
+         </header>
+         <nav>
+         	<ul>
+         		<li class="col1"><a href="#">Лондон</a></li>
+         		<li class="col2"><a href="pages/paris.html">Париж</a></li>
+         		<li class="col1"><a href="pages/rom.html">Рим</a></li>
+         		<li class="col2"><a href="pages/vena.html">Вена</a></li>
+         		<li class="col1"><a href="pages/madrid.html">Мадрид</a></li>
+         	</ul>
+         </nav>
+         <article>
+         	<h2 align="center">Лондон</h2>
+         	<div align="center">
+         		<img src="img/145627218.jpg" width="50%" height="50%" style="border-radius: 20px;">
+         	</div>
+			 <br><br>
+			 <div>
+         	<p>
+         		Столица Великобритании, город-достопримечательность и оплот английских традиций, Лондон (London) — самое популярное направление британской «экскурсионки». И это несмотря на ощутимую дороговизну направления и очевидную скромность большинства отелей. Увидеть королевских гвардейцев и услышать бой Биг-Бена, покормить воронов в Тауэре и обозреть город с «Лондонского глаза» — вот обязательные занятия столичных экскурсантов (как и традиционный «пятничный стаканчик» в до отказа забитых пабах Сохо).
+         	</p>
+         	<p>
+         		Лондон, столицу Англии и всей Великобритании стоит посетить только за то, что это родина Шерлока Холмса. Недостаточно? Вот вам еще повод: множество интересных музеев с бесплатным входом. Неужели и этого мало? Тогда — читайте по буквам: в Лондоне всегда в наличии исключительно вкусное пиво!
+			</p>
+			 </div>
+		 </article>
+		 <h2 style="text-align:center">Интересные места в Лондоне</h2>
+
+		<div class="container_img">
+		<div class="mySlides">
+			<div class="numbertext">1 / 6</div>
+			<img src="img/London1.jpeg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">2 / 6</div>
+			<img src="img/London2.jpeg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">3 / 6</div>
+			<img src="img/London3.jpeg" style="width:100%">
+		</div>
+			
+		<div class="mySlides">
+			<div class="numbertext">4 / 6</div>
+			<img src="img/London4.jpeg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">5 / 6</div>
+			<img src="img/London5.jpeg" style="width:100%">
+		</div>
+			
+		<div class="mySlides">
+			<div class="numbertext">6 / 6</div>
+			<img src="img/London6.jpg" style="width:100%">
+		</div>
+			
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<div class="row">
+			<div class="column">
+			<img class="demo cursor" src="img/London1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Берега Темзы">
+			</div>
+			<div class="column">
+			<img class="demo cursor" src="img/London2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Тауэрский мост">
+			</div>
+			<div class="column">
+			<img class="demo cursor" src="img/London3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Знаменитый Биг-Бен">
+			</div>
+			<div class="column">
+			<img class="demo cursor" src="img/London4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Современный Лондон">
+			</div>
+			<div class="column">
+			<img class="demo cursor" src="img/London5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Биг-Бен">
+			</div>    
+			<div class="column">
+			<img class="demo cursor" src="img/London6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Собор Святого Павла">
+			</div>
+		</div>
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		</script>
+         <footer>Хорошего отдыха...</footer>
+      </div>
+   </body>
+</html>

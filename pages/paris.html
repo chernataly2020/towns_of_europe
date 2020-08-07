@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta name="viewpoint" content="width=max-width, initial-scale=1.0" charset="UTF-8">
+      <title>Париж</title>
+	  <link rel="stylesheet" type="text/css" href="../css/style.css">
+   </head>
+   <body>  
+      <div class="container">
+         <header>
+         	<h1>Города в Европе</h1>
+         </header>
+         <nav>
+         	<ul>
+         		<li class="col1"><a href="../index.html">Лондон</a></li>
+         		<li class="col2"><a href="#">Париж</a></li>
+         		<li class="col1"><a href="../pages/rom.html">Рим</a></li>
+         		<li class="col2"><a href="../pages/vena.html">Вена</a></li>
+         		<li class="col1"><a href="../pages/madrid.html">Мадрид</a></li>
+         	</ul>
+         </nav>
+         <article>
+         	<h2 align="center">Париж</h2>
+         	<div align="center">
+         		<img src="../img/paris.jpg" width="50%" height="50%" style="border-radius: 20px;">
+         	</div>
+			 <br><br>
+			 <div>
+         	<p>
+				Столица Франции Париж – один из главных европейских городов и мировой центр культуры, искусства, моды и гастрономии. В центральной части города, построенной в XIX веке, проходят широкие бульвары и протекает река Сена. Самые известные достопримечательности Парижа – Эйфелева башня и собор Парижской Богоматери в готическом стиле, возведенный в XII веке. 
+         	</p>
+         	<p>
+				Также город славится своими многочисленными кафе и бутиками с одеждой от известных модельеров на улице Фобур-Сент-Оноре.
+			</p>
+			 </div>
+         </article>
+	  </div>
+	  <h2 style="text-align:center">Интересные места в Париже</h2>
+
+		<div class="container_img">
+		<div class="mySlides">
+			<div class="numbertext">1 / 6</div>
+			<img src="../img/paris1.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">2 / 6</div>
+			<img src="../img/paris2.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">3 / 6</div>
+			<img src="../img/paris3.jpg" style="width:100%">
+		</div>
+			
+		<div class="mySlides">
+			<div class="numbertext">4 / 6</div>
+			<img src="../img/paris4.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">5 / 6</div>
+			<img src="../img/paris5.jpg" style="width:100%">
+		</div>
+			
+		<div class="mySlides">
+			<div class="numbertext">6 / 6</div>
+			<img src="../img/paris6.jpg" style="width:100%">
+		</div>
+
+		
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="../img/paris1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Лувр в Париже">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/paris2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Эфелева башня">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/paris3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Монмартр в Париже">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/paris4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Музей д'Орсе в Париже">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/paris5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Латинский квартал">
+			</div>    
+			<div class="column">
+				<img class="demo cursor" src="../img/paris6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Собор Парижской Богоматери">
+			</div>
+		</div>
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		</script>
+         <footer>Хорошего отдыха...</footer>
+      </div>
+   </body>
+</html>

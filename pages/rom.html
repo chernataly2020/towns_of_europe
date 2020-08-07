@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta name="viewpoint" content="width=max-width, initial-scale=1.0" charset="UTF-8">
+      <title>Рим</title>
+	  <link rel="stylesheet" type="text/css" href="../css/style.css">
+   </head>
+   <body>  
+      <div class="container">
+         <header>
+         	<h1>Города в Европе</h1>
+         </header>
+         <nav>
+         	<ul>
+				<li class="col1"><a href="../index.html">Лондон</a></li>
+				<li class="col2"><a href="../pages/paris.html">Париж</a></li>
+				<li class="col1"><a href="#">Рим</a></li>
+				<li class="col2"><a href="../pages/vena.html">Вена</a></li>
+				<li class="col1"><a href="../pages/madrid.html">Мадрид</a></li>
+         	</ul>
+         </nav>
+         <article>
+         	<h2 align="center">Рим</h2>
+         	<div align="center">
+         		<img src="../img/rom.jpg" width="50%" height="50%" style="border-radius: 20px;">
+         	</div>
+			 <br><br>
+			 <div>
+         	<p>
+				Рим – столица Италии, огромный многонациональный город, история которого насчитывает почти три тысячи лет. Его архитектура и произведения искусства оказали огромное влияние на мировую культуру.
+         	</p>
+         	<p>
+				Развалины античного Форума и Колизея демонстрируют былое величие Римской империи. Ватикан, резиденция руководства Римско-католической церкви, пользуется огромной популярностью у туристов благодаря собору Святого Петра и многочисленным музеям. Среди них – Сикстинская капелла, где можно увидеть знаменитые фрески Микеланджело.
+         	</p>
+			 </div>
+		 </article>
+		 <h2 style="text-align:center">Интересные места в Риме</h2>
+
+		 <div class="container_img">
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="../img/rom1.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="../img/rom2.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="../img/rom3.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="../img/rom4.jpg" style="width:100%">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="../img/rom5.jpg" style="width:100%">
+			</div>
+				
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="../img/rom6.jpg" style="width:100%">
+			</div>
+
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="../img/rom1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Вид на Форум">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/rom2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Квиринальский дворец (1573. Арх. Доменико Фонтана, Карло Мадерно) на Пьяцца дель Квиринале">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/rom3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Капитолийская волчица, вскармливающая молоком двоих младенцев Ромула и Рема — символ Рима. V в. до н.э">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/rom4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Колизей или Амфитеатр Флавиев, построенный при императорах Веспасиане и его сыне Тите в 70 — 80 гг. н.э.">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="../img/rom5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Domus Augustana — Дворец императора Домициана (51 — 96 гг.) на Палатинском холме">
+			</div>    
+			<div class="column">
+				<img class="demo cursor" src="../img/rom6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Триумфальная арка императора Константина, 315 г. Справа — Колизей">
+			</div>
+		</div>
+
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		</script>
+         <footer>Хорошего отдыха...</footer>
+	  </div>
+   </body>
+</html>
